@@ -1,0 +1,14 @@
+<!--pages/comment/videoList.wxml-->
+<template name="video">
+<block wx:for="{{dataList}}" >
+<view class="list" bindtap="clickList" id="{{item.id}}">
+  <view class="left">
+     <image src='{{item.images.small}}' mode="aspectFill"></image>
+  </view>
+ <view class='right'>
+   <text>{{item.text}}</text>
+ </view>
+</view>
+<view class="hr"></view>
+</block> 
+</template>

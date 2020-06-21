@@ -1,0 +1,7 @@
+<!--pages/recommend/recommend.wxml-->
+<view class='content'>
+<import src="../comment/videoList"/>
+<template is="video" data="{{dataList}}"/>
+<import src="../comment/loading"/>
+<template is="loading" data="{{hidden}}"/>
+</view>

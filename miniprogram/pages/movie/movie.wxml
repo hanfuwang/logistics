@@ -1,0 +1,48 @@
+<!--pages/movie/movie.wxml-->
+<view class='content'>
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" style='width:100%'/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <import src="../comment/videoList"/>
+<template is="video" data="{{dataList}}"/> -->
+<!-- <import src="../comment/loading"/>
+<template is="loading" data="{{hidden}}"/> -->
+<view class="all" >
+ <view class="cirle" wx:for="{{cirle}}">
+     <image
+          style="width: 100rpx; height: 100rpx; background-color: #eeeeee;"
+          src="{{item.img}}"
+        ></image>
+        <text>{{item.text}}</text>
+ </view>
+</view>
+<!-- 实时论坛 -->
+ <view>
+ <view>
+ <image  style="width: 30rpx; height: 30rpx; background-color: #eeeeee;margin-right:5px"      src='../../images/001.jpg'></image><text>实时论坛</text>
+  <view class="more">更多 ></view>
+ </view>
+ <!-- 图片列表 -->
+ <block wx:for="{{lunTan}}">
+  <view class="allImage">
+  <image class="lunImage" src='{{item.img}}' mode='widthFix'></image>
+  <text class="text">{{item.text}}</text>
+   <view class="look">
+    <image src='../../images/001.jpg'></image><text>赞</text>
+   </view>
+   <view class="look">
+    <image src='../../images/001.jpg'></image><text>分享</text>
+   </view>
+  </view>
+  </block>
+ </view>
+</view>
